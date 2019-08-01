@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{44C5986D-717B-81B5-C7FD-C9BE3F235637}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Control/Control_Move.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Kernel/HelloARController.cs" Line="246" Column="47" />
+      <File FileName="Assets/Scripts/Model/Model_Load.cs" Line="16" Column="10" />
+      <File FileName="Assets/Scripts/Model/Model_Data.cs" Line="24" Column="29" />
+      <File FileName="Assets/Scripts/View/View_GetUI.cs" Line="35" Column="16" />
+      <File FileName="Assets/Scripts/Control/Control_Move.cs" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SenseAR" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Control" expanded="True">
+                  <Node name="Control_Move.cs" selected="True" />
+                </Node>
+                <Node name="Kernel" expanded="True" />
+                <Node name="Model" expanded="True" />
+                <Node name="View" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="115cb822-9e65-4ec4-b632-04c3ce352bd1" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
