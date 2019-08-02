@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Model;
+using Control;
 
 namespace View
 {
@@ -29,9 +30,29 @@ namespace View
 
             Button_Chair.onClick.AddListener(delegate ()
             {
-                GameObject ChairObj =  Instantiate(Model_Data.Instance.LoadObj[0], new Vector3(100, 100, 100), Quaternion.identity);
-                HelloARController.Instance.StandardARBasePrefab = ChairObj;
-                HelloARController.Instance.bPlaceModel = true;
+                GameObject ChairObj =  Instantiate(Model_Data.Instance.LoadObj.Find(s => s.name.Equals("Chair")), new Vector3(100, 100, 100), Quaternion.identity);
+                int i = GameTool.FindGameObjNumWithTag("Chair");
+                ChairObj.name = ChairObj.name + i.ToString();
+                GameTool.ChangeChooseActive(Model_Data.Instance.SceneObj, ChairObj.name);
+                Model_Data.Instance.SceneObj.Add(ChairObj);
+            });
+
+            Button_Sofa.onClick.AddListener(delegate()
+            {
+                GameObject SofaObj = Instantiate(Model_Data.Instance.LoadObj.Find(s => s.name.Equals("Sofa")), new Vector3(100, 100, 100), Quaternion.identity);
+                int i = GameTool.FindGameObjNumWithTag("Sofa");
+                SofaObj.name = SofaObj.name + i.ToString();
+                GameTool.ChangeChooseActive(Model_Data.Instance.SceneObj, SofaObj.name);
+                Model_Data.Instance.SceneObj.Add(SofaObj);
+            });
+
+            Button_Lamp.onClick.AddListener(delegate ()
+            {
+                GameObject LampObj = Instantiate(Model_Data.Instance.LoadObj.Find(s => s.name.Equals("Lamp")), new Vector3(100, 100, 100), Quaternion.identity);
+                int i = GameTool.FindGameObjNumWithTag("Lamp");
+                LampObj.name = LampObj.name + i.ToString();
+                GameTool.ChangeChooseActive(Model_Data.Instance.SceneObj, LampObj.name);
+                Model_Data.Instance.SceneObj.Add(LampObj);
             });
         }
 

@@ -22,7 +22,6 @@ namespace Model
         private void Awake()
         {
             Instance = this;
-            MainObj = GameObject.FindGameObjectWithTag("Main");
         }
 
 

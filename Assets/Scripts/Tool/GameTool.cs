@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Control;
 
 public class GameTool : MonoBehaviour 
 {
@@ -175,6 +176,27 @@ public class GameTool : MonoBehaviour
             Destroy(MyList[i]);
         }
         MyList.Clear();
+    }
+
+    /// <summary>
+    /// </summary>
+    /// <param name="gameobjectList">物体挂载数组</param>
+    public static void ChangeChooseActive(List<GameObject> gameobjectList,string name)
+    {
+        foreach (var item in gameobjectList)
+        {
+            if (item.name == name)
+            {
+                return;
+            }
+            else
+            {
+                item.GetComponent<Control_Move>().enabled = false;
+                int i = item.transform.childCount;
+                item.transform.GetChild(i - 1).gameObject.SetActive(false);
+            }
+
+        }
     }
 
 }
